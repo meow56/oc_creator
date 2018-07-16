@@ -18,7 +18,7 @@ var species = [
   "Oni", 
   "Dragon", 
   "Yama", 
-  "Half-human"
+  "Half-Human"
 ];
 
 var halfHumanType = [
@@ -43,7 +43,7 @@ var basicPersonality = [
   "Humble",
   "Cowardly",
   "Brave",
-  "Hot-headed/Hair Trigger Temper",
+  "Hot-headed",
   "Tsundere",
   "Reckless",
   "Energetic",
@@ -51,7 +51,7 @@ var basicPersonality = [
   "Selfless",
   "Yandere",
   "Pacifist",
-  "Sadist",
+  "Sadistic",
   "Perfectionist",
   "Emotionless/Rei Ayanami Expy",
   "Kuudere"
@@ -485,7 +485,7 @@ var job = [
 ];
 
 function d20() {
-  return Math.floor(Math.random() * 19);
+  return Math.floor(Math.random() * 20);
 }
 
 function writeText(text, strong) {
@@ -511,14 +511,13 @@ function generateOC() {
   var specNum = d20(); // species
   var speciesText = species[specNum];
   if(specNum === 19) { // determine the other half of half-human
-    speciesText = species[specNum] + " (" + halfHumanType[Math.ceil((d20() + 1) / 2) - 1] + ")";
+    speciesText = species[specNum] + " Half-" + halfHumanType[Math.ceil((d20() + 1) / 2) - 1];
   }
-  writeText("Species:", true);
-  writeText(speciesText);
+  writeText("Your character is a " + basicPersonality[perNum] + " " + speciesText);
   
   var perNum = d20(); // basic personality
   writeText("Basic Personality:", true);
-  writeText(basicPersonality[perNum]);
+  writeText();
   
   writeText("Intelligence:", true);
   writeText(intellect[d20()]);
