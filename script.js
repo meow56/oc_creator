@@ -605,7 +605,7 @@ function generateOC() {
     while(eyeColor2 === eyeColor1 || eyeColor2 === "Heterochromia") {
       eyeColor2 = eyes[d20()];
     }
-    var eyeText = "Heterochromia: " + eyeColor1 + " " + eyeColor2;
+    var eyeText = "Heterochromia: " + eyeColor1 + ", " + eyeColor2;
   } else {
     var eyeText = eyes[eyeNum];
   }
