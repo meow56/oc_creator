@@ -250,7 +250,7 @@ var abilGim = [
   "Situational - Ability is affected by some kind of natural cycle or repeating occurrence. (Day/night, comets, eclipses, tides, lunar phases, seasons, etc...)",
   "Outsourced - Ability is affected by, or linked to, an external source or object.",
   "Outsourced - Ability is affected by, or linked to, an external source or object.",
-  "Sentience - The Ability has a "will", can choose how well it wishes to perform. May abandon its user if it feels the user is unworthy to use it. And may show its true power if enough \"trust\" is built.",
+  "Sentience - The Ability has a \"will\", can choose how well it wishes to perform. May abandon its user if it feels the user is unworthy to use it. And may show its true power if enough \"trust\" is built.",
   "Lucky - Ability either must have a luck-based mechanic, or has an uncanny ability to work regardless of skill level"
 ];
 
