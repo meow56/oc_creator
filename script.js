@@ -494,7 +494,7 @@ function writeText(text, strong) {
   temp.id = text;
   temp.innerHTML = text;
   if(strong) {
-    temp.class = "strong";
+    temp.classList.add("strong");
   }
   results.appendChild(temp);
   results.appendChild(document.createElement("BR"));
