@@ -527,7 +527,7 @@ function generateOC() {
     var genderText = "gender. It can be any gender. They are also a"; // tsukumogami can identify as whatever
   }
   writeText("Your character is a " + genderText + " " + basicPersonality[perNum] + " " + speciesText + " born in " + origin[Math.ceil((d20() + 1) / 2) - 1] + ". They are " + age[d20()] + ".");
-  writeText("They have " + intellect[d20()] + " intelligence, " + abilStr[d20()] + " strength, " + abilStr[d20()] + " stamina, and " + spd[d20()] + " speed.");
+  writeText("They have " + intellect[d20()] + " intelligence, " + strSta[d20()] + " strength, " + strSta[d20()] + " stamina, and " + spd[d20()] + " speed.");
   
   writeText("Basic/Initial Physical Health:", true);
   writeText(pHealth[d20()]);
