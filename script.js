@@ -186,26 +186,26 @@ var phobia = [
 ];
 
 var age = [
-  "5-12",
-  "13-20",
-  "21",
-  "22",
-  "23",
-  "24",
-  "25",
-  "26",
-  "27",
-  "28",
-  "29",
-  "30-49",
-  "50-99",
-  "100-199",
-  "200-299",
-  "300-399",
-  "400-499",
-  "500-999",
-  "1000-2000",
-  "Age Unknown/Very, VERY old"
+  "5-12 years old",
+  "13-20 years old",
+  "21 years old",
+  "22 years old",
+  "23 years old",
+  "24 years old",
+  "25 years old",
+  "26 years old",
+  "27 years old",
+  "28 years old",
+  "29 years old",
+  "30-49 years old",
+  "50-99 years old",
+  "100-199 years old",
+  "200-299 years old",
+  "300-399 years old",
+  "400-499 years old",
+  "500-999 years old",
+  "1000-2000 years old",
+  "very very old"
 ];
 
 var abilStr = [
@@ -524,16 +524,10 @@ function generateOC() {
       var genderText = "Male";
     }
   } else {
-    var genderText = "Your choice!"; // tsukumogami can identify as whatever
+    var genderText = "gender. It can be any gender. They are also a"; // tsukumogami can identify as whatever
   }
-  writeText("Your character is a " + genderText + " " + basicPersonality[perNum] + " " + speciesText + " born in " + origin[Math.ceil((d20() + 1) / 2) - 1]);
-  
-  writeText("Intelligence:", true);
-  writeText(intellect[d20()]);
-  
-
-  writeText("Gender:", true);
-  writeText(genderText);
+  writeText("Your character is a " + genderText + " " + basicPersonality[perNum] + " " + speciesText + " born in " + origin[Math.ceil((d20() + 1) / 2) - 1] + ". They are " + age[d20()] + ".");
+  writeText("They have " + intellect[d20()] + " intelligence, " + abilStr[d20()] + " strength, " + abilStr[d20()] + " stamina, and " + spd[d20()] + " speed.");
   
   writeText("Basic/Initial Physical Health:", true);
   writeText(pHealth[d20()]);
@@ -552,23 +546,11 @@ function generateOC() {
   writeText("Basic/Initial Mental Health:", true);
   writeText(mentalHealthText);
   
-  writeText("Age:", true);
-  writeText(age[d20()]);
-  
   writeText("Ability Strength:", true);
   writeText(abilStr[d20()]);
   
   writeText("Ability Constraint:", true);
   writeText(abilGim[d20()]);
-  
-  writeText("Strength:", true);
-  writeText(strSta[d20()]);
-  
-  writeText("Stamina:", true);
-  writeText(strSta[d20()]);
-  
-  writeText("Speed:", true);
-  writeText(spd[d20()]);
   
   writeText("Initial Reputation:", true);
   writeText(initRep[d20()]);
