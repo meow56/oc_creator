@@ -104,15 +104,15 @@ var intellect = [
 ];
 
 var origin = [
-  "Outside World",
-  "Human Village",
+  "the Outside World",
+  "the Human Village",
   "Makai",
-  "Eientei/Bamboo Forest of the Lost",
-  "Forest of Magic",
+  "Eientei/the Bamboo Forest of the Lost",
+  "the Forest of Magic",
   "Jigoku/Hell",
-  "Underground",
-  "Lunar Capital",
-  "The Future",
+  "the Underground",
+  "the Lunar Capital",
+  "the Future",
   "Another Dimension/Parallel Universe"
 ];
 
@@ -513,19 +513,11 @@ function generateOC() {
   if(specNum === 19) { // determine the other half of half-human
     speciesText = species[specNum] + " Half-" + halfHumanType[Math.ceil((d20() + 1) / 2) - 1];
   }
-  writeText("Your character is a " + basicPersonality[perNum] + " " + speciesText);
-  
   var perNum = d20(); // basic personality
-  writeText("Basic Personality:", true);
-  writeText();
-  
-  writeText("Intelligence:", true);
-  writeText(intellect[d20()]);
-  
   if(specNum !== 10) { // if not tsukumogami
     var genNum = d20(); // gender
     if(genNum === 0 || genNum === 19) {
-      var genderText = "Agender, Bigender, Ambiguous";
+      var genderText = "Bigender/Agender/Ambiguous";
     } else if((genNum + 1) % 2 === 0) {
       var genderText = "Female";
     } else {
@@ -534,11 +526,14 @@ function generateOC() {
   } else {
     var genderText = "Your choice!"; // tsukumogami can identify as whatever
   }
+  writeText("Your character is a " + genderText + " " + basicPersonality[perNum] + " " + speciesText + " born in " + origin[Math.ceil((d20() + 1) / 2) - 1]);
+  
+  writeText("Intelligence:", true);
+  writeText(intellect[d20()]);
+  
+
   writeText("Gender:", true);
   writeText(genderText);
-  
-  writeText("Place of Origin:", true);
-  writeText(origin[Math.ceil((d20() + 1) / 2) - 1]);
   
   writeText("Basic/Initial Physical Health:", true);
   writeText(pHealth[d20()]);
