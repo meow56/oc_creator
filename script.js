@@ -393,49 +393,49 @@ var initAlign = [
 ];
 
 var hair = [
-  "Albino",
-  "Light Blonde",
-  "Light Blonde",
-  "Blonde",
-  "Blonde",
-  "Dark Blonde",
-  "Dark Blonde",
-  "Light Brown",
-  "Light Brown",
-  "Brunette",
-  "Brunette",
-  "Auburn",
-  "Auburn",
-  "Red",
-  "Red",
-  "Blue",
-  "Blue",
-  "Black",
-  "Black",
-  "Black"
+  "are albino",
+  "have light blonde hair",
+  "have light blonde hair",
+  "have blonde hair",
+  "have blonde hair",
+  "have dark blonde hair",
+  "have dark blonde hair",
+  "have light brown hair",
+  "have light brown hair",
+  "have brunette hair",
+  "have brunette hair",
+  "have auburn hair",
+  "have auburn hair",
+  "have red hair",
+  "have red hair",
+  "have blue hair",
+  "have blue hair",
+  "have black hair",
+  "have black hair",
+  "have black hair"
 ];
 
 var eyes = [
-  "Heterochromia",
-  "Red",
-  "Red",
-  "Yellow",
-  "Yellow",
-  "Green",
-  "Green",
-  "Light Blue",
-  "Light Blue",
-  "Hazel",
-  "Hazel",
-  "Black",
-  "Black",
-  "Purple",
-  "Purple",
-  "Dark Blue",
-  "Dark Blue",
-  "Brown",
-  "Brown",
-  "Grey/White"
+  "have heterochromia",
+  "red eyes",
+  "red eyes",
+  "yellow eyes",
+  "yellow eyes",
+  "green eyes",
+  "green eyes",
+  "light blue eyes",
+  "light blue eyes",
+  "hazel eyes",
+  "hazel eyes",
+  "black eyes",
+  "black eyes",
+  "purple eyes",
+  "purple eyes",
+  "dark blue eyes",
+  "dark blue eyes",
+  "brown eyes",
+  "brown eyes",
+  "grey or white eyes"
 ];
 
 var size = [
@@ -548,14 +548,56 @@ function generateOC() {
   } else {
     var genderText = "an any gendered"; // tsukumogami can identify as whatever
   }
+  
+  
+  var hairNum = d20(); // hair color
+  writeText("Hair Color:", true);
+  writeText(hair[hairNum]);
+  
+  if(hairNum !== 0) {
+    var eyeNum = d20(); // if not albino, eye color
+  } else {
+    var eyeNum = 1; // albinos have red eyes
+  }
+  if(eyeNum === 0) {
+    var eyeColor1 = eyes[d20()];
+    var eyeColor2 = eyes[d20()];
+    while(eyeColor1 === "have heterochromia") {
+      eyeColor1 = eyes[d20()];
+    }
+    while(eyeColor2 === eyeColor1 || eyeColor2 === "have heterochromia") {
+      eyeColor2 = eyes[d20()];
+    }
+    var eyeText = "have heterochromia; their eyes are colored " + eyeColor1 + " and " + eyeColor2;
+  } else {
+    var eyeText = eyes[eyeNum];
+  }
+  writeText("Eye Color:", true);
+  writeText(eyeText);
   writeText("Your character is ");
   writeText(genderText + " " + basicPersonality[perNum] + " " + speciesText, true);
   writeText(" born in ");
   writeText(origin[Math.ceil((d20() + 1) / 2) - 1], true);
   writeText(". They are ");
   writeText(age[d20()], true);
+  writeText(". They ");
+  writeText(hair[hairNum], true);
+  writeText(" and ");
+  writeText(eyeText, true);
   writeText(".");
   results.appendChild(document.createElement("BR"));
+  
+  if(perNum !== 15) {
+    writeText("Their preferred weapon is ");
+    writeText(choiceWep[d20()], true);
+    writeText(".");
+    results.appendChild(document.createElement("BR"));
+  } else {
+    writeText("Being a pacifist, they have no need for a weapon", true);
+    writeText(".");
+    results.appendChild(document.createElement("BR"));
+  }
+  
   writeText("They are:");
   var temp = document.createElement("UL");
   var temp2 = document.createElement("LI");
@@ -591,6 +633,7 @@ function generateOC() {
   writeText(pHealth[d20()], true);
   writeText(".");
   results.appendChild(document.createElement("BR"));
+  
   writeText("In terms of mental health, they ");
   writeText(mentalHealthText, true);
   writeText(".");
@@ -601,6 +644,7 @@ function generateOC() {
   writeText(abilStr[abilStrNum], true);
   writeText(".");
   results.appendChild(document.createElement("BR"));
+  
   if(abilStrNum !== 1) {
     writeText("Additionally, their ability ");
     writeText(abilGim[d20()], true);
@@ -613,46 +657,12 @@ function generateOC() {
   writeText(".");
   results.appendChild(document.createElement("BR"));
   
-  if(perNum !== 15) {
-    writeText("Their preferred weapon is ");
-    writeText(choiceWep[d20()], true);
-    writeText(".");
-    results.appendChild(document.createElement("BR"));
-  } else {
-    writeText("Being a pacifist, they have no need for a weapon", true);
-    writeText(".");
-    results.appendChild(document.createElement("BR"));
-  }
-  
-  writeText("They are ");
+  writeText("On the alignment chart, they are ");
   writeText(initAlign[d20()], true);
   writeText(".");
   results.appendChild(document.createElement("BR"));
   
-  var hairNum = d20(); // hair color
-  writeText("Hair Color:", true);
-  writeText(hair[hairNum]);
-  
-  if(hairNum !== 0) {
-    var eyeNum = d20(); // if not albino, eye color
-  } else {
-    var eyeNum = 1; // albinos have red eyes
-  }
-  if(eyeNum === 0) {
-    var eyeColor1 = eyes[d20()];
-    var eyeColor2 = eyes[d20()];
-    while(eyeColor1 === "Heterochromia") {
-      eyeColor1 = eyes[d20()];
-    }
-    while(eyeColor2 === eyeColor1 || eyeColor2 === "Heterochromia") {
-      eyeColor2 = eyes[d20()];
-    }
-    var eyeText = "Heterochromia: " + eyeColor1 + ", " + eyeColor2;
-  } else {
-    var eyeText = eyes[eyeNum];
-  }
-  writeText("Eye Color:", true);
-  writeText(eyeText);
+
   
   writeText("Height/Stature:", true);
   writeText(size[d20()]);
