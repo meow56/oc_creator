@@ -539,16 +539,16 @@ function generateOC() {
   if(specNum !== 10) { // if not tsukumogami
     var genNum = d20(); // gender
     if(genNum === 0 || genNum === 19) {
-      var genderText = " Bigender/Agender/Ambiguous";
+      var genderText = "a Bigender/Agender/Ambiguous";
     } else if((genNum + 1) % 2 === 0) {
-      var genderText = " Female";
+      var genderText = "a Female";
     } else {
-      var genderText = " Male";
+      var genderText = "a Male";
     }
   } else {
-    var genderText = "n any gendered"; // tsukumogami can identify as whatever
+    var genderText = "an any gendered"; // tsukumogami can identify as whatever
   }
-  writeText("Your character is a");
+  writeText("Your character is ");
   writeText(genderText + " " + basicPersonality[perNum] + " " + speciesText, true);
   writeText(" born in ");
   writeText(origin[Math.ceil((d20() + 1) / 2) - 1], true);
