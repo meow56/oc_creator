@@ -94,12 +94,12 @@ var intellect = [
   "of average intelligence",
   "of average intelligence",
   "of average intelligence",
-  "geniuses",
-  "geniuses",
-  "geniuses",
-  "geniuses",
-  "geniuses",
-  "geniuses",
+  "a genius",
+  "a genius",
+  "a genius",
+  "a genius",
+  "a genius",
+  "a genius",
   "Einstein levels of intelligent"
 ];
 
