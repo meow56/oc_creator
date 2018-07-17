@@ -615,7 +615,6 @@ function generateOC() {
   while(coreDrive2 === coreDrive1 || (coreDrive1 === 15 && coreDrive2 === 19) || (coreDrive1 === 19 && coreDrive2 === 15)) { 
     coreDrive2 = d20(); // if they're the same or you get logic and ardor, reroll
   }
-  writeText(coreDrive[coreDrive1] + ', ' + coreDrive[coreDrive2]);
   writeText("They have two core traits that drive them. The first is ");
   writeText(coreDrive[coreDrive1], true);
   writeText(".");
