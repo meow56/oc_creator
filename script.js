@@ -324,72 +324,72 @@ var spd = [
 ];
 
 var initRep = [
-  "Loathed/Feared",
-  "Unlikeable",
-  "Unlikeable",
-  "Unlikeable",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Likeable",
-  "Likeable",
-  "Likeable",
-  "Likeable",
-  "Very charismatic"
+  "loath or fear them",
+  "do not like them",
+  "do not like them",
+  "do not like them",
+  "are indifferent about them",
+  "are indifferent about them",
+  "are indifferent about them",
+  "are indifferent about them",
+  "are indifferent about them",
+  "are indifferent about them",
+  "are indifferent about them",
+  "are indifferent about them",
+  "are indifferent about them",
+  "are indifferent about them",
+  "are indifferent about them",
+  "like them",
+  "like them",
+  "like them",
+  "like them",
+  "love them"
 ];
 
 var choiceWep = [
-  "Fists/Martial arts.",
-  "Impractical vanilla swords.",
-  "Firearms/Bows/Javelins/Slingshots.",
-  "Magical swords/Weapons that effect or can be used with danmaku in some way.",
-  "No preference/Equally likely to use anything.",
-  "No preference/Equally likely to use anything.",
-  "No preference/Equally likely to use anything.",
-  "No preference/Equally likely to use anything.",
-  "No preference/Equally likely to use anything.",
-  "No preference/Equally likely to use anything.",
-  "No preference/Equally likely to use anything.",
-  "No preference/Equally likely to use anything.",
-  "No preference/Equally likely to use anything.",
-  "No preference/Equally likely to use anything.",
-  "No preference/Equally likely to use anything.",
-  "Magic/Danmaku/Ability abuse.",
-  "Magic/Danmaku/Ability abuse.",
-  "Magic/Danmaku/Ability abuse.",
-  "Magic/Danmaku/Ability abuse.",
-  "Other people."
+  "their fists or martial arts",
+  "any normal sword",
+  "a firearm, bow, javelin, or slingshot",
+  "a magical sword or other weapon that affect or can be used with danmaku in some way",
+  "any weapon",
+  "any weapon",
+  "any weapon",
+  "any weapon",
+  "any weapon",
+  "any weapon",
+  "any weapon",
+  "any weapon",
+  "any weapon",
+  "any weapon",
+  "any weapon",
+  "magic, danmaku, or ability abuse",
+  "magic, danmaku, or ability abuse",
+  "magic, danmaku, or ability abuse",
+  "magic, danmaku, or ability abuse",
+  "other people"
 ];
 
 var initAlign = [
-  "Chaotic evil.",
-  "Neutral evil.",
-  "Neutral evil.",
-  "Neutral evil.",
-  "Lawful evil.",
-  "Chaotic neutral.",
-  "Pure neutral.",
-  "Pure neutral.",
-  "Pure neutral.",
-  "Pure neutral.",
-  "Pure neutral.",
-  "Pure neutral.",
-  "Pure neutral.",
-  "Pure neutral.",
-  "Lawful neutral.",
-  "Chaotic good.",
-  "Neutral good.",
-  "Neutral good.",
-  "Neutral good.",
-  "Lawful good."
+  "chaotic evil",
+  "neutral evil",
+  "neutral evil",
+  "neutral evil",
+  "lawful evil",
+  "chaotic neutral",
+  "pure neutral",
+  "pure neutral",
+  "pure neutral",
+  "pure neutral",
+  "pure neutral",
+  "pure neutral",
+  "pure neutral",
+  "pure neutral",
+  "lawful neutral",
+  "chaotic good",
+  "neutral good",
+  "neutral good",
+  "neutral good",
+  "lawful good"
 ];
 
 var hair = [
@@ -608,16 +608,26 @@ function generateOC() {
     results.appendChild(document.createElement("BR"));
   }
   
-  writeText("Initial Reputation:", true);
-  writeText(initRep[d20()]);
+  writeText("Most people ");
+  writeText(initRep[d20()], true);
+  writeText(".");
+  results.appendChild(document.createElement("BR"));
   
   if(perNum !== 15) {
-    writeText("Weapon of Choice:", true);
-    writeText(choiceWep[d20()]);
+    writeText("Their preferred weapon is ");
+    writeText(choiceWep[d20()], true);
+    writeText(".");
+    results.appendChild(document.createElement("BR"));
+  } else {
+    writeText("Being a pacifist, they have no need for a weapon", true);
+    writeText(".");
+    results.appendChild(document.createElement("BR"));
   }
   
-  writeText("Initial Alignment:", true);
-  writeText(initAlign[d20()]);
+  writeText("They are ");
+  writeText(initAlign[d20()], true);
+  writeText(".");
+  results.appendChild(document.createElement("BR"));
   
   var hairNum = d20(); // hair color
   writeText("Hair Color:", true);
