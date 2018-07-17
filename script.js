@@ -81,7 +81,7 @@ var mHModifier = [
 ];
 
 var intellect = [
-  "not good with thinking",
+  "extremely dumb",
   "Cirno levels of intelligent",
   "below average thinkers",
   "below average thinkers",
