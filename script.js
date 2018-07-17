@@ -81,26 +81,26 @@ var mHModifier = [
 ];
 
 var intellect = [
-  "Abyssmal",
-  "Cirno-level",
-  "Below Average",
-  "Below Average",
-  "Below Average",
-  "Below Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Above Average",
-  "Above Average",
-  "Above Average",
-  "Above Average",
-  "Above Average",
-  "Above Average",
-  "Einstein"
+  "not good with thinking",
+  "Cirno levels of intelligent",
+  "below average thinkers",
+  "below average thinkers",
+  "below average thinkers",
+  "below average thinkers",
+  "of average intelligence",
+  "of average intelligence",
+  "of average intelligence",
+  "of average intelligence",
+  "of average intelligence",
+  "of average intelligence",
+  "of average intelligence",
+  "geniuses",
+  "geniuses",
+  "geniuses",
+  "geniuses",
+  "geniuses",
+  "geniuses",
+  "Einstein levels of intelligent"
 ];
 
 var origin = [
@@ -254,50 +254,73 @@ var abilGim = [
   "Lucky - Ability either must have a luck-based mechanic, or has an uncanny ability to work regardless of skill level"
 ];
 
-var strSta = [
-  "Easily exhausted",
-  "Weak",
-  "Weak",
-  "Weak",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Average",
-  "Above average",
-  "Above average",
-  "Very strong",
-  "Very strong",
-  "Godlike"
+var str = [
+  "barely able to lift anything",
+  "weak",
+  "weak",
+  "weak",
+  "average in terms of strength",
+  "average in terms of strength",
+  "average in terms of strength",
+  "average in terms of strength",
+  "average in terms of strength",
+  "average in terms of strength",
+  "average in terms of strength",
+  "average in terms of strength",
+  "average in terms of strength",
+  "average in terms of strength",
+  "average in terms of strength",
+  "strong",
+  "strong",
+  "very strong",
+  "very strong",
+  "godlike in terms of strength"
+];
+
+var sta = [
+  "easily exhausted",
+  "weak in terms of stamina",
+  "weak in terms of stamina",
+  "weak in terms of stamina",
+  "average in terms of stamina",
+  "average in terms of stamina",
+  "average in terms of stamina",
+  "average in terms of stamina",
+  "average in terms of stamina",
+  "average in terms of stamina",
+  "average in terms of stamina",
+  "average in terms of stamina",
+  "average in terms of stamina",
+  "average in terms of stamina",
+  "average in terms of stamina",
+  "above average in terms of stamina",
+  "above average in terms of stamina",
+  "very strong",
+  "very strong",
+  "able to do things for a ridiculous amount of time"
 ];
 
 var spd = [
-  "Snail with a walker.",
-  "Slow.",
-  "Slow.",
-  "Slow.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Fast.",
-  "Fast.",
-  "Fast.",
-  "Fast.",
-  "Aya-level or greater."
+  "a snail with a walker",
+  "slow",
+  "slow",
+  "slow",
+  "average speed",
+  "average speed",
+  "average speed",
+  "average speed",
+  "average speed",
+  "average speed",
+  "average speed",
+  "average speed",
+  "average speed",
+  "average speed",
+  "average speed",
+  "fast",
+  "fast",
+  "fast",
+  "fast",
+  "Aya-level or greater"
 ];
 
 var initRep = [
@@ -527,7 +550,7 @@ function generateOC() {
     var genderText = "gender. It can be any gender. They are also a"; // tsukumogami can identify as whatever
   }
   writeText("Your character is a " + genderText + " " + basicPersonality[perNum] + " " + speciesText + " born in " + origin[Math.ceil((d20() + 1) / 2) - 1] + ". They are " + age[d20()] + ".");
-  writeText("They have " + intellect[d20()] + " intelligence, " + strSta[d20()] + " strength, " + strSta[d20()] + " stamina, and " + spd[d20()] + " speed.");
+  writeText("They are " + intellect[d20()] + ", " + str[d20()] + ", " + sta[d20()] + ", and " + spd[d20()] + ".");
   
   writeText("Basic/Initial Physical Health:", true);
   writeText(pHealth[d20()]);
