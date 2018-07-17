@@ -347,26 +347,26 @@ var initRep = [
 ];
 
 var choiceWep = [
-  "their fists or martial arts",
-  "any normal sword",
-  "a firearm, bow, javelin, or slingshot",
-  "a magical sword or other weapon that affect or can be used with danmaku in some way",
-  "any weapon",
-  "any weapon",
-  "any weapon",
-  "any weapon",
-  "any weapon",
-  "any weapon",
-  "any weapon",
-  "any weapon",
-  "any weapon",
-  "any weapon",
-  "any weapon",
-  "magic, danmaku, or ability abuse",
-  "magic, danmaku, or ability abuse",
-  "magic, danmaku, or ability abuse",
-  "magic, danmaku, or ability abuse",
-  "other people"
+  "Their preferred weapon is their fists or martial arts",
+  "Their preferred weapon is any normal sword",
+  "Their preferred weapon is a firearm, bow, javelin, or slingshot",
+  "Their preferred weapon is a magical sword or other weapon that affect or can be used with danmaku in some way",
+  "They have no preferred weapon",
+  "They have no preferred weapon",
+  "They have no preferred weapon",
+  "They have no preferred weapon",
+  "They have no preferred weapon",
+  "They have no preferred weapon",
+  "They have no preferred weapon",
+  "They have no preferred weapon",
+  "They have no preferred weapon",
+  "They have no preferred weapon",
+  "They have no preferred weapon",
+  "Their preferred weapon is magic, danmaku, or ability abuse",
+  "Their preferred weapon is magic, danmaku, or ability abuse",
+  "Their preferred weapon is magic, danmaku, or ability abuse",
+  "Their preferred weapon is magic, danmaku, or ability abuse",
+  "Their preferred weapon is other people"
 ];
 
 var initAlign = [
@@ -584,7 +584,6 @@ function generateOC() {
   results.appendChild(document.createElement("BR"));
   
   if(perNum !== 15) {
-    writeText("Their preferred weapon is ");
     writeText(choiceWep[d20()], true);
     writeText(".");
     results.appendChild(document.createElement("BR"));
