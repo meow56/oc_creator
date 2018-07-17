@@ -438,6 +438,29 @@ var eyes = [
   "grey or white eyes"
 ];
 
+var colorEyes = [
+  "have heterochromia",
+  "red",
+  "red",
+  "yellow",
+  "yellow",
+  "green",
+  "green",
+  "light blue",
+  "light blue",
+  "hazel",
+  "hazel",
+  "black",
+  "black",
+  "purple",
+  "purple",
+  "dark blue",
+  "dark blue",
+  "brown",
+  "brown",
+  "grey or white"
+];
+
 var size = [
   "Dwarfism.",
   "Short.",
@@ -558,15 +581,15 @@ function generateOC() {
     var eyeNum = 1; // albinos have red eyes
   }
   if(eyeNum === 0) {
-    var eyeColor1 = eyes[d20()];
-    var eyeColor2 = eyes[d20()];
+    var eyeColor1 = colorEyes[d20()];
+    var eyeColor2 = colorEyes[d20()];
     while(eyeColor1 === "have heterochromia") {
-      eyeColor1 = eyes[d20()];
+      eyeColor1 = colorEyes[d20()];
     }
     while(eyeColor2 === eyeColor1 || eyeColor2 === "have heterochromia") {
-      eyeColor2 = eyes[d20()];
+      eyeColor2 = colorEyes[d20()];
     }
-    var eyeText = "have heterochromia; their eyes are colored " + eyeColor1 + " and " + eyeColor2;
+    var eyeText = "have heterochromia; their eyes are " + eyeColor1 + " and " + eyeColor2;
   } else {
     var eyeText = eyes[eyeNum];
   }
