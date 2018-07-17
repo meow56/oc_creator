@@ -255,26 +255,26 @@ var abilGim = [
 ];
 
 var strSta = [
-  "Easily exhausted.",
-  "Weak.",
-  "Weak.",
-  "Weak.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Above average.",
-  "Above average.",
-  "Very strong.",
-  "Very strong.",
-  "Godlike."
+  "Easily exhausted",
+  "Weak",
+  "Weak",
+  "Weak",
+  "Average",
+  "Average",
+  "Average",
+  "Average",
+  "Average",
+  "Average",
+  "Average",
+  "Average",
+  "Average",
+  "Average",
+  "Average",
+  "Above average",
+  "Above average",
+  "Very strong",
+  "Very strong",
+  "Godlike"
 ];
 
 var spd = [
