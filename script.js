@@ -117,49 +117,49 @@ var origin = [
 ];
 
 var pHealth = [
-  "Terminal Illness",
-  "Cripple/Amputee",
-  "Epilepsy",
-  "Asthma/Anemia",
-  "At least one severe allergy (As in, anaphylactic shock inducing)",
-  "Minor scars",
-  "Minor scars",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Superior immune system", // (Does not apply to things that are logically immune to disease.)
-  "Uber healing factor/Pseudo-immortality"
+  "have a terminal illness",
+  "are a cripple or amputee",
+  "have epilepsy",
+  "have asthma or anemia",
+  "have at least one severe allergy (As in, anaphylactic shock inducing)",
+  "have minor scars",
+  "have minor scars",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "have a superior immune system (assuming disease applies)", // (Does not apply to things that are logically immune to disease.)
+  "have an uber healing factor and are pseudo-immortal"
 ];
 
 var mHealth = [
-  "Completely and utterly insane",
-  "Psychosis",
-  "Multiple Personality Disorder",
-  "Bipolar Disorder",
-  "Depression",
-  "At least one phobia",
-  "PTSD",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy",
-  "Healthy and resistant to changes in mental health",
-  "Healthy and resistant to changes in mental health"
+  "are completely and utterly insane",
+  "have psychosis",
+  "have multiple personality disorder",
+  "have bipolar disorder",
+  "have depression",
+  "have at least one phobia",
+  "have PTSD",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy",
+  "are healthy and resistant to changes in mental health",
+  "are healthy and resistant to changes in mental health"
 ];
 
 var phobia = [
@@ -305,17 +305,17 @@ var spd = [
   "slow",
   "slow",
   "slow",
-  "average speed",
-  "average speed",
-  "average speed",
-  "average speed",
-  "average speed",
-  "average speed",
-  "average speed",
-  "average speed",
-  "average speed",
-  "average speed",
-  "average speed",
+  "of average speed",
+  "of average speed",
+  "of average speed",
+  "of average speed",
+  "of average speed",
+  "of average speed",
+  "of average speed",
+  "of average speed",
+  "of average speed",
+  "of average speed",
+  "of average speed",
   "fast",
   "fast",
   "fast",
@@ -539,16 +539,16 @@ function generateOC() {
   if(specNum !== 10) { // if not tsukumogami
     var genNum = d20(); // gender
     if(genNum === 0 || genNum === 19) {
-      var genderText = "Bigender/Agender/Ambiguous";
+      var genderText = " Bigender/Agender/Ambiguous";
     } else if((genNum + 1) % 2 === 0) {
-      var genderText = "Female";
+      var genderText = " Female";
     } else {
-      var genderText = "Male";
+      var genderText = " Male";
     }
   } else {
-    var genderText = "gender. It can be any gender. They are also a"; // tsukumogami can identify as whatever
+    var genderText = "n any gendered"; // tsukumogami can identify as whatever
   }
-  writeText("Your character is a ");
+  writeText("Your character is a");
   writeText(genderText + " " + basicPersonality[perNum] + " " + speciesText, true);
   writeText(" born in ");
   writeText(origin[Math.ceil((d20() + 1) / 2) - 1], true);
@@ -576,9 +576,6 @@ function generateOC() {
   temp.appendChild(temp2);
   results.appendChild(temp);
   
-  writeText("Basic/Initial Physical Health:", true);
-  writeText(pHealth[d20()]);
-  
   var initMHealth = d20() + mHModifier[perNum]; // initial mental health plus personality modifiers
   if(initMHealth < 0) {
     initMHealth = 0;
@@ -590,7 +587,9 @@ function generateOC() {
   } else {
     var mentalHealthText = mHealth[initMHealth];
   }
-  writeText("Basic/Initial Mental Health:", true);
+  writeText("They ");
+  writeText(pHealth[d20()], true);
+  writeText(" and also ");
   writeText(mentalHealthText);
   
   writeText("Ability Strength:", true);
