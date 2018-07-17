@@ -589,9 +589,11 @@ function generateOC() {
   }
   writeText("In terms of physical health, they ");
   writeText(pHealth[d20()], true);
+  writeText(".");
   results.appendChild(document.createElement("BR"));
   writeText("In terms of mental health, they ");
   writeText(mentalHealthText, true);
+  writeText(".");
   results.appendChild(document.createElement("BR"));
   
   writeText("Ability Strength:", true);
