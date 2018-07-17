@@ -462,26 +462,26 @@ var colorEyes = [
 ];
 
 var size = [
-  "Dwarfism.",
-  "Short.",
-  "Short.",
-  "Short.",
-  "Short.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Average.",
-  "Tall.",
-  "Tall.",
-  "Tall.",
-  "Tall.",
-  "Gigantism."
+  "suffer from dwarfism",
+  "are short",
+  "are short",
+  "are short",
+  "are short",
+  "are of average height",
+  "are of average height",
+  "are of average height",
+  "are of average height",
+  "are of average height",
+  "are of average height",
+  "are of average height",
+  "are of average height",
+  "are of average height",
+  "are of average height",
+  "are tall",
+  "are tall",
+  "are tall",
+  "are tall",
+  "suffer from gigantism"
 ];
 
 var coreDrive = [ // this is where i thank the js gods that js can use single quotes as well
@@ -603,7 +603,8 @@ function generateOC() {
   writeText(hair[hairNum], true);
   writeText(" and ");
   writeText(eyeText, true);
-  writeText(".");
+  writeText(". In terms of size, they ");
+  writeText(size[d20()], true);
   results.appendChild(document.createElement("BR"));
   
   if(perNum !== 15) {
@@ -682,8 +683,7 @@ function generateOC() {
   
 
   
-  writeText("Height/Stature:", true);
-  writeText(size[d20()]);
+
   
   var coreDrive1 = d20(); // core drive one
   var coreDrive2 = d20(); // core drive two
