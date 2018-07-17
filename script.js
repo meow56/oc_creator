@@ -163,26 +163,26 @@ var mHealth = [
 ];
 
 var phobia = [
-  "Acrophobia (fear of heights)",
-  "Arachnophobia (fear of spiders)",
-  "Automatonophobia (fear of something that falsely represents a sentient being[like dolls])",
-  "Claustrophobia (fear of confinement/tight spaces)",
-  "Emitophobia (fear of vomiting)",
-  "Trypanophobia (fear of injections)",
-  "Mysophobia (fear of germs and dirt)",
-  "Doomiphobica (fear that the world is going to end)",
-  "Necrophobia (fear of death/dead things)",
-  "Ophidiophobia (fear of snakes)",
-  "Ego-Death (fear of humiliation)",
-  "Cynophobia (fear of dogs)",
-  "Monophobia (fear of being alone)",
-  "Aphenphosmphobia (fear of intimacy/rejection/close contact)",
-  "Xenophobia (fear of strangers)",
-  "Scotophobia (fear of darkness)",
-  "Aichmophobia (fear of knives and other sharp objects)",
-  "Glossophobia (fear of public speaking)",
-  "Atychiphobia (fear of failure)",
-  "Gamophobia (fear of commitment)"
+  "acrophobia (fear of heights)",
+  "arachnophobia (fear of spiders)",
+  "automatonophobia (fear of something that falsely represents a sentient being[like dolls])",
+  "claustrophobia (fear of confinement/tight spaces)",
+  "emitophobia (fear of vomiting)",
+  "trypanophobia (fear of injections)",
+  "mysophobia (fear of germs and dirt)",
+  "doomiphobica (fear that the world is going to end)",
+  "necrophobia (fear of death/dead things)",
+  "ophidiophobia (fear of snakes)",
+  "ego-death (fear of humiliation)",
+  "cynophobia (fear of dogs)",
+  "monophobia (fear of being alone)",
+  "aphenphosmphobia (fear of intimacy/rejection/close contact)",
+  "xenophobia (fear of strangers)",
+  "scotophobia (fear of darkness)",
+  "aichmophobia (fear of knives and other sharp objects)",
+  "glossophobia (fear of public speaking)",
+  "atychiphobia (fear of failure)",
+  "gamophobia (fear of commitment)"
 ];
 
 var age = [
