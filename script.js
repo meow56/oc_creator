@@ -587,10 +587,12 @@ function generateOC() {
   } else {
     var mentalHealthText = mHealth[initMHealth];
   }
-  writeText("They ");
+  writeText("In terms of physical health, they ");
   writeText(pHealth[d20()], true);
-  writeText(" and also ");
+  results.appendChild(document.createElement("BR"));
+  writeText("In terms of mental health, they ");
   writeText(mentalHealthText);
+  results.appendChild(document.createElement("BR"));
   
   writeText("Ability Strength:", true);
   writeText(abilStr[d20()]);
