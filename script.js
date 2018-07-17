@@ -301,7 +301,7 @@ var sta = [
 ];
 
 var spd = [
-  "a snail with a walker",
+  "really really slow",
   "slow",
   "slow",
   "slow",
@@ -320,7 +320,7 @@ var spd = [
   "fast",
   "fast",
   "fast",
-  "Aya-level or greater speed"
+  "Aya-level or faster"
 ];
 
 var initRep = [
