@@ -551,8 +551,6 @@ function generateOC() {
   
   
   var hairNum = d20(); // hair color
-  writeText("Hair Color:", true);
-  writeText(hair[hairNum]);
   
   if(hairNum !== 0) {
     var eyeNum = d20(); // if not albino, eye color
@@ -572,8 +570,6 @@ function generateOC() {
   } else {
     var eyeText = eyes[eyeNum];
   }
-  writeText("Eye Color:", true);
-  writeText(eyeText);
   writeText("Your character is ");
   writeText(genderText + " " + basicPersonality[perNum] + " " + speciesText, true);
   writeText(" born in ");
