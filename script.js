@@ -520,7 +520,6 @@ function writeText(text, strong) {
     temp.classList.add("strong");
   }
   results.appendChild(temp);
-  results.appendChild(document.createElement("BR"));
 }
 
 function generateOC() {
@@ -549,8 +548,33 @@ function generateOC() {
   } else {
     var genderText = "gender. It can be any gender. They are also a"; // tsukumogami can identify as whatever
   }
-  writeText("Your character is a " + genderText + " " + basicPersonality[perNum] + " " + speciesText + " born in " + origin[Math.ceil((d20() + 1) / 2) - 1] + ". They are " + age[d20()] + ".");
-  writeText("They are " + intellect[d20()] + ", " + str[d20()] + ", " + sta[d20()] + ", and " + spd[d20()] + ".");
+  writeText("Your character is a ");
+  writeText(genderText + " " + basicPersonality[perNum] + " " + speciesText, true);
+  writeText(" born in ");
+  writeText(origin[Math.ceil((d20() + 1) / 2) - 1], true);
+  writeText(". They are ");
+  writeText(age[d20()], true);
+  writeText(".");
+  results.appendChild(document.createElement("BR"));
+  writeText("They are:");
+  var temp = document.createElement("UL");
+  var temp2 = document.createElement("LI");
+  temp2.classList.add("strong");
+  temp2.innerHTML = intellect[d20()];
+  temp.appendChild(temp2);
+  var temp2 = document.createElement("LI");
+  temp2.classList.add("strong");
+  temp2.innerHTML = str[d20()];
+  temp.appendChild(temp2);
+  var temp2 = document.createElement("LI");
+  temp2.classList.add("strong");
+  temp2.innerHTML = sta[d20()];
+  temp.appendChild(temp2);
+  var temp2 = document.createElement("LI");
+  temp2.classList.add("strong");
+  temp2.innerHTML = spd[d20()];
+  temp.appendChild(temp2);
+  results.appendChild(temp);
   
   writeText("Basic/Initial Physical Health:", true);
   writeText(pHealth[d20()]);
