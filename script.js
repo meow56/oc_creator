@@ -145,7 +145,7 @@ var mHealth = [
   "have multiple personality disorder",
   "have bipolar disorder",
   "have depression",
-  "have at least one phobia",
+  "have",
   "have PTSD",
   "are healthy",
   "are healthy",
@@ -583,7 +583,7 @@ function generateOC() {
     initMHealth = 19;
   }
   if(initMHealth === 5) {
-    var mentalHealthText = mHealth[initMHealth] + " (" + phobia[d20()] + ")";
+    var mentalHealthText = mHealth[initMHealth] + " " + phobia[d20()];
   } else {
     var mentalHealthText = mHealth[initMHealth];
   }
