@@ -295,8 +295,8 @@ var sta = [
   "of average stamina",
   "above average in terms of stamina",
   "above average in terms of stamina",
-  "very strong",
-  "very strong",
+  "not easily exhausted",
+  "not easily exhausted",
   "able to do things for a ridiculous amount of time"
 ];
 
