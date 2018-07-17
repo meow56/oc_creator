@@ -6,7 +6,7 @@ var species = [
   "Human", 
   "Hermit/Celestial", 
   "Ghost/Phantom", 
-  "Vengeful spirit", 
+  "Vengeful Spirit", 
   "Jiang-shi", 
   "Earth Spider", 
   "Tsukumogami", 
