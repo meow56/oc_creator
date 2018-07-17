@@ -485,49 +485,49 @@ var size = [
 ];
 
 var coreDrive = [ // this is where i thank the js gods that js can use single quotes as well
-  'Atonement: "I\'ve made a terrible choice earlier in life. It would be inconcievable not to try to make it right."',
-  'Understanding: "I wish I could understand X."',
-  'Superiority: "X is the bane of existence. We would be better off without X."',
-  'Calm: "I like living life at my pace and really don\'t appreciate being rushed."',
-  'Advocation: "X is important to me. I could never forgive myself if I let something bad happen to X."',
-  'Devotion: "I am an adherent to X and consider it an extremely important part of how I live my life."',
-  'Purpose: "I wish I had a purpose in life. I need to find a purpose."',
-  'Vigilance: "Nobody deserves to go through X. I\'ll do whatever I can to make sure that doesn\'t happen."',
-  'Singularity: "I wish I was as special as X. I wish I wasn\'t so ordinary."',
-  'Knowledge: "Why doesn\'t the world make sense? I must find out."',
-  'Merriment: "Why is everyone so serious? Having fun is what life\'s all about!"',
-  'Abstinance: "Engaging in X is wrong. I will not engage in X."',
-  'Dependence: "I find myself with a deep need for X. If I have X, I will feel content."',
-  'Development: "I need to do better at X. I would feel much better about myself if I did."',
-  'Independance: "I need to be able to stand on my own. Asking for help will only hurt me in the long run."',
-  'Logic: "I can\'t let my emotions choose my path for me."',
-  'Community: "People are very important to me. I will do X to strengthen the bonds with those close to me."',
-  'Altruism: "I feel that it is important for others to have X, and I work hard to provide it or make it available."',
-  'Authority: "My life\'s calling is to lead X." (make a very good reason as to why)',
-  'Ardor: "I can\'t ignore my feelings. To do so would just feel wrong."'
+  'atonement: "I\'ve made a terrible choice earlier in life. It would be inconcievable not to try to make it right."',
+  'specific knowledge: "I wish I could understand X."',
+  'superiority: "X is the bane of existence. We would be better off without X."',
+  'calmness: "I like living life at my pace and really don\'t appreciate being rushed."',
+  'advocation: "X is important to me. I could never forgive myself if I let something bad happen to X."',
+  'devotion: "I am an adherent to X and consider it an extremely important part of how I live my life."',
+  'purpose: "I wish I had a purpose in life. I need to find a purpose."',
+  'vigilance: "Nobody deserves to go through X. I\'ll do whatever I can to make sure that doesn\'t happen."',
+  'uniqueness: "I wish I was as special as X. I wish I wasn\'t so ordinary."',
+  'knowledge: "Why doesn\'t the world make sense? I must find out."',
+  'merriment: "Why is everyone so serious? Having fun is what life\'s all about!"',
+  'abstinence: "Engaging in X is wrong. I will not engage in X."',
+  'dependence: "I find myself with a deep need for X. If I have X, I will feel content."',
+  'development: "I need to do better at X. I would feel much better about myself if I did."',
+  'independence: "I need to be able to stand on my own. Asking for help will only hurt me in the long run."',
+  'logic: "I can\'t let my emotions choose my path for me."',
+  'community: "People are very important to me. I will do X to strengthen the bonds with those close to me."',
+  'altruism: "I feel that it is important for others to have X, and I work hard to provide it or make it available."',
+  'authority: "My life\'s calling is to lead X." (make a very good reason as to why)',
+  'ardor: "I can\'t ignore my feelings. To do so would just feel wrong."'
 ];
 
 var job = [
-  "Pet, slave, no occupation, or unemployed.",
-  "Farmer.",
-  "Blacksmith.",
-  "Tailor.",
-  "Brewer/Barkeep.",
-  "Youkai Hunter.",
-  "Cook.",
-  "Merchant.",
-  "Bodyguard.",
-  "Seer/Medium.",
-  "Mercenary.",
-  "Thief.",
-  "Cultist/Priest/Monk.",
-  "Maid/Butler.",
-  "Contractor/Carpenter.",
-  "Engineer/Technician.",
-  "Teacher.",
-  "Doctor/Nurse/Medic/Pharmacist.",
-  "Writer/Author/Journalist/Painter.",
-  "Leadership Position. (Town Elder, Group Leader, High priest, Cult Leader, Chairman etc.)"
+  "Being a pet, slave, or having no occupation",
+  "farming",
+  "smithing",
+  "being a tailor",
+  "barkeeping",
+  "hunting youkai",
+  "cooking",
+  "trading",
+  "guarding",
+  "being a seer or medium",
+  "being a mercenary",
+  "stealing",
+  "being a cultist, priest, or monk",
+  "serving as a maid or butler",
+  "carpenting",
+  "engineering",
+  "teaching",
+  "healing (ie doctor, nurse, medic, pharmacist, etc)",
+  "being artistic (ie writer, artist, journalist, painter, etc)",
+  "leading (ie Town Elder, Group Leader, High priest, Cult Leader, Chairman, etc)"
 ];
 
 function d20() {
@@ -605,7 +605,27 @@ function generateOC() {
   writeText(eyeText, true);
   writeText(". In terms of size, they ");
   writeText(size[d20()], true);
+  writeText(". Their current job is ");
+  writeText(job[d20()], true);
+  writeText(".");
   results.appendChild(document.createElement("BR"));
+  
+  var coreDrive1 = d20(); // core drive one
+  var coreDrive2 = d20(); // core drive two
+  while(coreDrive2 === coreDrive1 || (coreDrive1 === 15 && coreDrive2 === 19) || (coreDrive1 === 19 && coreDrive2 === 15)) { 
+    coreDrive2 = d20(); // if they're the same or you get logic and ardor, reroll
+  }
+  writeText(coreDrive[coreDrive1] + ', ' + coreDrive[coreDrive2]);
+  writeText("They have two core traits that drive them. The first is ");
+  writeText(coreDrive[coreDrive1], true);
+  writeText(".");
+  results.appendChild(document.createElement("BR"));
+  
+  writeText("The second trait is ");
+  writeText(coreDrive[coreDrive2], true);
+  writeText(".");
+  results.appendChild(document.createElement("BR"));
+  
   
   if(perNum !== 15) {
     writeText(choiceWep[d20()], true);
@@ -680,19 +700,4 @@ function generateOC() {
   writeText(initAlign[d20()], true);
   writeText(".");
   results.appendChild(document.createElement("BR"));
-  
-
-  
-
-  
-  var coreDrive1 = d20(); // core drive one
-  var coreDrive2 = d20(); // core drive two
-  while(coreDrive2 === coreDrive1) {
-    coreDrive2 = d20(); // if they're the same, reroll
-  }
-  writeText("Core Drives:", true);
-  writeText(coreDrive[coreDrive1] + ', ' + coreDrive[coreDrive2]);
-  
-  writeText("Job:", true);
-  writeText(job[d20()]);
 }
