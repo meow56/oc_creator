@@ -320,7 +320,7 @@ var spd = [
   "fast",
   "fast",
   "fast",
-  "Aya-level or greater"
+  "Aya-level or greater speed"
 ];
 
 var initRep = [
