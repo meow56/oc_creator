@@ -209,49 +209,49 @@ var age = [
 ];
 
 var abilStr = [
-  "Harmful to user/Very bad.",
-  "Powerless/No ability.",
-  "Mundane/Nearly useless both in and out of combat.",
-  "Mundane/Nearly useless both in and out of combat.",
-  "Mundane/Nearly useless both in and out of combat.",
-  "Awesome, but impractical/Can be useful in some circumstancs, but has drawbacks.",
-  "Awesome, but impractical/Can be useful in some circumstancs, but has drawbacks.",
-  "Awesome, but impractical/Can be useful in some circumstancs, but has drawbacks.",
-  "Awesome, but impractical/Can be useful in some circumstancs, but has drawbacks.",
-  "Awesome, but impractical/Can be useful in some circumstancs, but has drawbacks.",
-  "Practical/Useful.",
-  "Practical/Useful.",
-  "Practical/Useful.",
-  "Practical/Useful.",
-  "Practical/Useful.",
-  "Powerful.",
-  "Powerful.",
-  "Powerful.",
-  "Powerful.",
-  "Very powerful, but has a constraint on the user to prevent it from becoming OP."
+  "is harmful or otherwise has large drawbacks",
+  "does not exist",
+  "is mundane or nearly useless both in and out of combat",
+  "is mundane or nearly useless both in and out of combat",
+  "is mundane or nearly useless both in and out of combat",
+  "can be useful in some circumstancs, but has drawbacks",
+  "can be useful in some circumstancs, but has drawbacks",
+  "can be useful in some circumstancs, but has drawbacks",
+  "can be useful in some circumstancs, but has drawbacks",
+  "can be useful in some circumstancs, but has drawbacks",
+  "is useful",
+  "is useful",
+  "is useful",
+  "is useful",
+  "is useful",
+  "is powerful",
+  "is powerful",
+  "is powerful",
+  "is powerful",
+  "is very powerful, but has a second constraint chosen by you"
 ];
 
 var abilGim = [
-  "Consumption - The ability, while it might be useful, gradually consumes the character in some way after repeated use.",
-  "The Hunger - The ability actively compels the character to want to use it, or is addicting to use. May or may not have withdrawal effects.",
-  "How do I shot web? - Character knows they have the ability, but has no idea how to use their ability well, if at all.",
-  "How do I shot web? - Character knows they have the ability, but has no idea how to use their ability well, if at all.",
-  "Emotional - Ability only works in times of stress, strong emotion, or desperation.",
-  "Emotional - Ability only works in times of stress, strong emotion, or desperation.",
-  "Emotional - Ability only works in times of stress, strong emotion, or desperation.",
-  "Irony - Ability must be ironic when compared to at least one other trait. (i.e. Manipulation of snakes if the character has a snake phobia)",
-  "Irony - Ability must be ironic when compared to at least one other trait. (i.e. Manipulation of snakes if the character has a snake phobia)",
-  "Irony - Ability must be ironic when compared to at least one other trait. (i.e. Manipulation of snakes if the character has a snake phobia)",
-  "Nature motif - Ability must be related to an aspect of nature in some way.",
-  "Nature motif - Ability must be related to an aspect of nature in some way.",
-  "Nature motif - Ability must be related to an aspect of nature in some way.",
-  "Situational - Ability is affected by some kind of natural cycle or repeating occurrence. (Day/night, comets, eclipses, tides, lunar phases, seasons, etc...)",
-  "Situational - Ability is affected by some kind of natural cycle or repeating occurrence. (Day/night, comets, eclipses, tides, lunar phases, seasons, etc...)",
-  "Situational - Ability is affected by some kind of natural cycle or repeating occurrence. (Day/night, comets, eclipses, tides, lunar phases, seasons, etc...)",
-  "Outsourced - Ability is affected by, or linked to, an external source or object.",
-  "Outsourced - Ability is affected by, or linked to, an external source or object.",
-  "Sentience - The Ability has a \"will\", can choose how well it wishes to perform. May abandon its user if it feels the user is unworthy to use it. And may show its true power if enough \"trust\" is built.",
-  "Lucky - Ability either must have a luck-based mechanic, or has an uncanny ability to work regardless of skill level"
+  "consumes the character in some way after repeated use",
+  "actively compels the character to want to use it, or is addicting to use, and may or may not have withdrawal effects",
+  "does not function properly because the character does not know how to use it",
+  "does not function properly because the character does not know how to use it",
+  "only works in times of stress, strong emotion, or desperation",
+  "only works in times of stress, strong emotion, or desperation",
+  "only works in times of stress, strong emotion, or desperation",
+  "is ironic when compared to at least one other trait (i.e. Manipulation of snakes if the character has a snake phobia)",
+  "is ironic when compared to at least one other trait (i.e. Manipulation of snakes if the character has a snake phobia)",
+  "is ironic when compared to at least one other trait (i.e. Manipulation of snakes if the character has a snake phobia)",
+  "has a nature motif",
+  "has a nature motif",
+  "has a nature motif",
+  "is affected by some kind of natural cycle or repeating occurrence (Day/night, comets, eclipses, tides, lunar phases, seasons, etc...)",
+  "is affected by some kind of natural cycle or repeating occurrence (Day/night, comets, eclipses, tides, lunar phases, seasons, etc...)",
+  "is affected by some kind of natural cycle or repeating occurrence (Day/night, comets, eclipses, tides, lunar phases, seasons, etc...)",
+  "is affected by, or linked to, an external source or object",
+  "is affected by, or linked to, an external source or object",
+  "has a \"will\" and can choose how well it wishes to perform; it may either abandon its user if it feels the user is unworthy to use it, or show its true power if enough \"trust\" is built",
+  "must either have a luck-based mechanic, or an uncanny ability to work regardless of skill level"
 ];
 
 var str = [
@@ -596,11 +596,17 @@ function generateOC() {
   writeText(".");
   results.appendChild(document.createElement("BR"));
   
-  writeText("Ability Strength:", true);
-  writeText(abilStr[d20()]);
-  
-  writeText("Ability Constraint:", true);
-  writeText(abilGim[d20()]);
+  var abilStrNum = d20();
+  writeText("Their ability ");
+  writeText(abilStr[abilStrNum], true);
+  writeText(".");
+  results.appendChild(document.createElement("BR"));
+  if(abilStrNum !== 1) {
+    writeText("Additionally, their ability ");
+    writeText(abilGim[d20()], true);
+    writeText(".");
+    results.appendChild(document.createElement("BR"));
+  }
   
   writeText("Initial Reputation:", true);
   writeText(initRep[d20()]);
