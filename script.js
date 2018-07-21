@@ -534,7 +534,7 @@ var ocGenShown = true;
 var rNTShown = false;
 
 var touhous = [
-	"Reimu Hakurei(PC-98)<br>~Shrine Maiden Who Protects Dreams and Tradition~<br>player character",
+	"Reimu Hakurei (PC-98)<br>~Shrine Maiden Who Protects Dreams and Tradition~<br>player character",
 	"SinGyoku<br>~Gate Keeper~<br>TH 1, stage 5 boss",
 	"YuugenMagan<br>~Evil Eyes~<br>TH 1, Makai Route, stage 10 boss",
 	"Elis<br>~Innocent Devil~<br>TH 1, Makai Route, stage 15 boss",
@@ -549,7 +549,7 @@ var touhous = [
 	"\"Two Red Dots\"<br>TH 2, stage 3 midboss",
 	"\"Five Magic Stones\"<br>TH 2, stage 3 boss",
 	"Matenshi<br>TH 2, stage 4 midboss",
-	"Marisa Kirisame(PC-98)<br>~A Being Made of Magic and Red Dreams~<br>TH 2, stage 4 boss; TH 3; TH 4, playable/stage 4 boss; TH 5, playable",
+	"Marisa Kirisame (PC-98)<br>~A Being Made of Magic and Red Dreams~<br>TH 2, stage 4 boss; TH 3; TH 4, playable/stage 4 boss; TH 5, playable",
 	"Ellen<br>~Hardworking Witch Who Dreams of Love~<br>TH 3",
 	"Sokrates<br>TH 3",
 	"Kotohime<br>~Princess Dreaming of Beauty in Danmaku~<br>TH 3",
