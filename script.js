@@ -534,7 +534,7 @@ var ocGenShown = true;
 var rNTShown = false;
 
 var touhous = [
-	"Reimu (PC-98)<br>~Shrine Maiden Who Protects Dreams and Tradition~<br>player character",
+	"Reimu Hakurei(PC-98)<br>~Shrine Maiden Who Protects Dreams and Tradition~<br>player character",
 	"SinGyoku<br>~Gate Keeper~<br>TH 1, stage 5 boss",
 	"YuugenMagan<br>~Evil Eyes~<br>TH 1, Makai Route, stage 10 boss",
 	"Elis<br>~Innocent Devil~<br>TH 1, Makai Route, stage 15 boss",
@@ -549,7 +549,7 @@ var touhous = [
 	"\"Two Red Dots\"<br>TH 2, stage 3 midboss",
 	"\"Five Magic Stones\"<br>TH 2, stage 3 boss",
 	"Matenshi<br>TH 2, stage 4 midboss",
-	"Marisa (PC-98)<br>~A Being Made of Magic and Red Dreams~<br>TH 2, stage 4 boss; TH 3; TH 4, playable/stage 4 boss; TH 5, playable",
+	"Marisa Kirisame(PC-98)<br>~A Being Made of Magic and Red Dreams~<br>TH 2, stage 4 boss; TH 3; TH 4, playable/stage 4 boss; TH 5, playable",
 	"Ellen<br>~Hardworking Witch Who Dreams of Love~<br>TH 3",
 	"Sokrates<br>TH 3",
 	"Kotohime<br>~Princess Dreaming of Beauty in Danmaku~<br>TH 3",
@@ -584,8 +584,8 @@ var touhous = [
     "\"Unnamed Fairyesque Makai Resident\"<br>TH 5",
     "\"Unnamed Devilesque Makai Resident\"<br>TH 5",
     
-    "Reimu<br>~Shrine Maiden of Paradise~<br>player character",
-	"Marisa<br>~Ordinary Magician<br>player character",
+    "Reimu Hakurei<br>~Shrine Maiden of Paradise~<br>player character",
+	"Marisa Kirisame<br>~Ordinary Magician<br>player character",
 	"Rumia<br>~Youkai of the Dusk~<br>TH 6, stage 1 midboss/boss; TH 9.5",
 	"Daiyousei<br>TH 6, stage 2 midboss; TH 12.8, Misty Lake midboss/extra midboss",
 	"Cirno<br>~Fairy of the Ice~<br>TH 6, stage 2 boss; TH 7, stage 1 midboss; TH 9; TH 9.5; TH 12.3; TH 12.8, PC; TH 14, stage 1 midboss; TH 14.3; TH 16, PC",
