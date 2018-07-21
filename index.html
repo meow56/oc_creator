@@ -1,23 +1,50 @@
 <html>
   <head>
     <title>
-      OC Generator
+      Touhou stuff
     </title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="stylesheet.css">
   </head>
   <body>
-    <h3>
-      OC Generator
-    </h3>
-    <p>
-      Uses <a href="https://sta.sh/01g0mzeunbpd">this</a> as a base.
-    </p>
-    <div id="results">
-      
+    <div id="sidebar" class="sidebar">
+      <button id="oc_gen" onclick="showOCGen();" class="sidebarbutton">
+        OC Generator
+      </button>
+      <button id="random_touhou" onclick="showRNT();" class="sidebarbutton">
+        Random Touhou
+      </button>
     </div>
-    <button id="generate" onclick="generateOC();">
-      Generate
-    </button>
+    <div id="main" class="main">
+      <div id="oc_generator">
+        <h3>
+          OC Generator
+        </h3>
+        <p>
+          Uses <a href="https://sta.sh/01g0mzeunbpd">this</a> as a base.
+        </p>
+        <div id="results">
+          
+        </div>
+        <button id="generate" onclick="generateOC();">
+          Generate
+        </button>
+      </div>
+      
+      <div id="RNTouhou">
+        <h3>
+          Random Touhou Character
+        </h3>
+        <p>
+          All characters come from <a href="https://en.touhouwiki.net/wiki/Characters">here</a>. Titles from character page, when possible.
+        </p>
+        <div id="results_RNT">
+          
+        </div>
+        <button id="generate_RNT" onclick="generateRNT();">
+          Generate
+        </button>
+      </div>
+    </div>
   </body>
 </html>
