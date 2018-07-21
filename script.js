@@ -121,7 +121,7 @@ var pHealth = [
   "are a cripple or amputee",
   "have epilepsy",
   "have asthma or anemia",
-  "have at least one severe allergy (As in, anaphylactic shock inducing)",
+  "have at least one severe allergy (as in, anaphylactic shock inducing)",
   "have minor scars",
   "have minor scars",
   "are healthy",
@@ -135,7 +135,7 @@ var pHealth = [
   "are healthy",
   "are healthy",
   "are healthy",
-  "have a superior immune system (assuming disease applies)", // (Does not apply to things that are logically immune to disease.)
+  "have a superior immune system (assuming disease applies)",
   "have an uber healing factor and are pseudo-immortal"
 ];
 
@@ -145,7 +145,7 @@ var mHealth = [
   "have multiple personality disorder",
   "have bipolar disorder",
   "have depression",
-  "have",
+  "have", // at least one phobia
   "have PTSD",
   "are healthy",
   "are healthy",
@@ -165,7 +165,7 @@ var mHealth = [
 var phobia = [
   "acrophobia (fear of heights)",
   "arachnophobia (fear of spiders)",
-  "automatonophobia (fear of something that falsely represents a sentient being[like dolls])",
+  "automatonophobia (fear of something that falsely represents a sentient being [like dolls])",
   "claustrophobia (fear of confinement/tight spaces)",
   "emitophobia (fear of vomiting)",
   "trypanophobia (fear of injections)",
@@ -350,7 +350,7 @@ var choiceWep = [
   "Their preferred weapon is their fists or martial arts",
   "Their preferred weapon is any nonmagical sword",
   "Their preferred weapon is a firearm, bow, javelin, or slingshot",
-  "Their preferred weapon is a magical sword or other weapon that affect or can be used with danmaku in some way",
+  "Their preferred weapon is a magical sword or other weapon that affects or can be used with danmaku in some way",
   "They have no preferred weapon",
   "They have no preferred weapon",
   "They have no preferred weapon",
