@@ -530,8 +530,15 @@ var job = [
   "leading (ie Town Elder, Group Leader, High priest, Cult Leader, Chairman, etc)"
 ];
 
+var ocGenShown = true;
+var rNTShown = false;
+
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function d20() {
-  return Math.floor(Math.random() * 20);
+  return randomNumber(0, 19);
 }
 
 function writeText(text, strong) {
@@ -699,4 +706,10 @@ function generateOC() {
   writeText(initAlign[d20()], true);
   writeText(".");
   results.appendChild(document.createElement("BR"));
+}
+
+function showOCGen() {
+  if(!ocGenShown) {
+    
+  }
 }
