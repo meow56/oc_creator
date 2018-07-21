@@ -348,7 +348,7 @@ var initRep = [
 
 var choiceWep = [
   "Their preferred weapon is their fists or martial arts",
-  "Their preferred weapon is any normal sword",
+  "Their preferred weapon is any nonmagical sword",
   "Their preferred weapon is a firearm, bow, javelin, or slingshot",
   "Their preferred weapon is a magical sword or other weapon that affect or can be used with danmaku in some way",
   "They have no preferred weapon",
