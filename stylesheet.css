@@ -18,6 +18,7 @@
 
 .sidebarbutton {
   border: none;
+  border-bottom-style: solid;
   background: #FFF;
   width: 90px;
 }
