@@ -799,6 +799,8 @@ function generateOC() {
       eyeColor2 = colorEyes[d20()];
     }
     var eyeText = "have heterochromia; their eyes are " + eyeColor1 + " and " + eyeColor2;
+  } else if(hairNum === 0) {
+    var eyeText = "have red eyes";
   } else {
     var eyeText = eyes[eyeNum];
   }
