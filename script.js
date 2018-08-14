@@ -173,7 +173,7 @@ var phobia = [
   "doomiphobica (fear that the world is going to end)",
   "necrophobia (fear of death/dead things)",
   "ophidiophobia (fear of snakes)",
-  "ego-death (fear of humiliation)",
+  "katagelophobia (fear of humiliation)",
   "cynophobia (fear of dogs)",
   "monophobia (fear of being alone)",
   "aphenphosmphobia (fear of intimacy/rejection/close contact)",
