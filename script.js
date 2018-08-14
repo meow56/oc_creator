@@ -167,22 +167,22 @@ var phobia = [
   "arachnophobia (fear of spiders)",
   "automatonophobia (fear of something that falsely represents a sentient being [like dolls])",
   "claustrophobia (fear of confinement/tight spaces)",
-  "emitophobia (fear of vomiting)",
+  "emetophobia (fear of vomiting)",
   "trypanophobia (fear of injections)",
   "mysophobia (fear of germs and dirt)",
-  "doomiphobica (fear that the world is going to end)",
+  "tetraphobia (fear of the number 4)",
   "necrophobia (fear of death/dead things)",
   "ophidiophobia (fear of snakes)",
   "katagelophobia (fear of humiliation)",
   "cynophobia (fear of dogs)",
   "monophobia (fear of being alone)",
-  "aphenphosmphobia (fear of intimacy/rejection/close contact)",
+  "aphenphosmphobia (fear of being touched)",
   "xenophobia (fear of strangers)",
   "scotophobia (fear of darkness)",
   "aichmophobia (fear of knives and other sharp objects)",
   "glossophobia (fear of public speaking)",
   "atychiphobia (fear of failure)",
-  "gamophobia (fear of commitment)"
+  "gamophobia (fear of commitment, especially marriage)"
 ];
 
 var age = [
